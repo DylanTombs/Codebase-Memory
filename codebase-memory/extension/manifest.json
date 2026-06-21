@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Codebase Memory",
+  "version": "1.0",
+  "description": "Ask why your codebase works the way it does — right from GitHub",
+  "host_permissions": [
+    "https://github.com/*",
+    "http://localhost:8000/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
