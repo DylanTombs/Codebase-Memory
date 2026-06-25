@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Why did we set up a CI/CD pipeline?",
+    "answer": "The CI/CD pipeline was introduced in PR #4 to automate testing and deployment, reducing the risk of human error during releases. The team wanted every push to main to be automatically validated and deployable without manual steps.",
+    "sources": [
+      { "pr_number": 4, "pr_title": "CI/CD pipeline", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/4", "merged_at": "2024-01-01" }
+    ]
+  },
+  {
+    "question": "Why did we add load tests?",
+    "answer": "Load tests were added in PR #6 to validate that the URL shortener could handle production-level traffic before going live. The team identified that without benchmarks, there was no way to know whether the service would hold up under concurrent requests.",
+    "sources": [
+      { "pr_number": 6, "pr_title": "Feature/load tests", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/6", "merged_at": "2024-01-01" }
+    ]
+  },
+  {
+    "question": "Why did we switch to JSON logging?",
+    "answer": "JSON structured logging was introduced in PR #5 to make logs machine-parseable and compatible with log aggregation tools. Plain-text logs were difficult to filter and query at scale, so the team adopted a structured format that works out of the box with tools like Datadog or CloudWatch.",
+    "sources": [
+      { "pr_number": 5, "pr_title": "Feature/json loggin", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/5", "merged_at": "2024-01-01" }
+    ]
+  },
+  {
+    "question": "Why did we harden the infrastructure?",
+    "answer": "Infrastructure hardening in PR #3 addressed security concerns identified during an internal review — open ports, missing rate limiting, and insufficient input validation on the redirect endpoint. The goal was to make the service safe to expose publicly.",
+    "sources": [
+      { "pr_number": 3, "pr_title": "Infrastructure hardening", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/3", "merged_at": "2024-01-01" }
+    ]
+  },
+  {
+    "question": "Why did we use Terraform?",
+    "answer": "Terraform was chosen in PR #2 to define infrastructure as code, making the environment fully reproducible. The team wanted to avoid manual cloud console changes that couldn't be reviewed, versioned, or rolled back — Terraform solves all three.",
+    "sources": [
+      { "pr_number": 2, "pr_title": "Terraform initiation", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/2", "merged_at": "2024-01-01" }
+    ]
+  },
+  {
+    "question": "How was the core URL shortener built?",
+    "answer": "The core code generator, URL controller, and service layer were established in PR #1 as the foundation of the project. The design separates concerns cleanly — the controller handles HTTP, the service owns business logic, and the generator is a pure function responsible for producing short codes.",
+    "sources": [
+      { "pr_number": 1, "pr_title": "Core Code Generator and Url Controller and Service", "pr_url": "https://github.com/DylanTombs/URL-Shortener/pull/1", "merged_at": "2024-01-01" }
+    ]
+  }
+]
